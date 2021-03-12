@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab5</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- This will open the browser on click inside the app
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="openWithInAppBrowser('https://www.google.com')">
+           
+          Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+<!-- This will render the page in the app which is not possible for google and yahoo 
+  in a iframe because it set 'x-frame-options' to 'sameorigin' -->
+
+   <iframe src="https://www.google.com/webhp?igu=1"  width="100%" height="300"></iframe>
+  
+   <iframe src="https://tools.search.yahoo.com/" width="100%" height="300"></iframe>
+
+
+</ion-content>

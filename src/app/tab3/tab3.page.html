@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense" >
+    <ion-toolbar color="danger" >
+      <ion-title size="large">Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="ion-no-padding">
+    
+    <ion-item lines="none">
+      <ion-icon name="person-circle" slot="start"></ion-icon>
+      <ion-label class="profile-card">Sampritha Udaikumar</ion-label>
+    </ion-item>
+    
+  </ion-card>
+  <form  #form="ngForm" (ngSubmit)="profileUpdate(form)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input  name='name' type="text" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Age</ion-label>
+        <ion-input  name='age' type="number" ngModel required></ion-input>
+      </ion-item>
+      <ion-radio-group  name='gender' ngModel required>
+        <ion-list-header>
+          <ion-label>
+            Gender
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            Female
+          </ion-label>
+          <ion-radio slot="start" value="female"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Male
+          </ion-label>
+          <ion-radio slot="start" value="male"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input  name='username' type="email" ngModel required email></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input  name='password' type="password" ngModel required ></ion-input>
+      </ion-item>
+  
+    </ion-list>
+    <br>
+    <ion-button  size="small" type="submit" [disabled]="form.invalid" color="dark">Save</ion-button>
+  </form>
+ 
+
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+</ion-content>

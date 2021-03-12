@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-button (click)="getlocation()" >
+        <ion-icon slot="end" name="location-sharp"></ion-icon>
+         {{locationService.address}}
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="danger">
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-slides mode="md" pager="false" scrollbar="false" [options]="slideOpts">
+    <ion-slide>
+      <img class="home-slider" src="assets/Event_management.png" >
+    </ion-slide>
+    <ion-slide>
+      <img class="home-slider" src="assets/food.jpg" >
+    </ion-slide>
+    <ion-slide>
+      <img class="home-slider" src="assets/venue.jpg" >
+    </ion-slide>
+  </ion-slides>
+  <ion-list-header>
+    <ion-label>Categories</ion-label>
+    
+  </ion-list-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let cat of categories" size="4" size-sm class="ion-text-center">
+        <img class="image-style" src={{cat.imgPath}} >
+        <ion-label>{{cat.name}}</ion-label>
+      </ion-col>      
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-slides mode="ios" pager="false" scrollbar="false" >
+    <ion-slide *ngFor="let venue of venueList" >
+      <ion-grid>
+        <ion-row class="">
+          <ion-col class="ion-padding" size="6">
+            <ion-img src={{venue.imgPath}}></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides> -->
+  <ion-list-header>
+    <ion-label>Venues</ion-label>
+    
+  </ion-list-header>
+    <div  class="scrolling-wrapper">
+      <div  class="card" *ngFor="let venue of venueList">
+        <img class ="home-venue" src={{venue.imgPath}}>
+      </div>
+    </div>
+  
+</ion-content>

@@ -1,0 +1,42 @@
+ion-toolbar{
+    background-color: #eb445a;
+}
+.image-style{
+    border-radius: 100%;
+    min-height: 90px;
+    min-width: 90px;
+    max-height: 90px;
+    max-width: 90px;
+}
+
+    .home-slider{
+        height: 200px;
+        width: 100%;
+        object-fit: fill;
+    }
+
+ion-slides {
+    height: 200px;
+  }
+
+  .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+  
+    .card {
+      display: inline-block;
+    }
+
+    .home-venue{
+        width: 160px;
+        height: 130px;
+        margin: 8px;
+        object-fit: fill;
+        box-shadow: 2px 4px 7px rgb(0 0 0 / 85%);
+    }
+  }
